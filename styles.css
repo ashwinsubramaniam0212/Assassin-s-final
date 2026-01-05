@@ -69,7 +69,7 @@
 
         .site-subtitle {
             font-size: 1.4rem;
-            color: var(--color-primary);
+            color: linear-gradient(90deg, var(--color-primary), var(--color-accent));
             font-style: italic;
         }
 

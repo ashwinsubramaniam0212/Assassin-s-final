@@ -1,7 +1,5 @@
-// Navigation State
     let currentPage = 'home';
 
-    // Initialize
     document.addEventListener('DOMContentLoaded', () => {
         initNav();
         initSearch();
@@ -9,7 +7,6 @@
         renderPage('home');
     });
 
-    // Navigation
     function initNav() {
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -22,7 +19,6 @@
         });
     }
 
-    // Search
     function initSearch() {
         const input = document.getElementById('search-input');
         const results = document.getElementById('search-results');
@@ -383,7 +379,8 @@ html += `
             <div class="section">
                 <div class="infobox">
                     <div class="infobox-header">${char.name}</div>
-                    <div class="infobox-image">${char.icon}</div>
+                    <div class="infobox-image">${char.icon} <img src="${char.image}" alt="${game.title} Cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;"></div>
+
                     <div class="infobox-content">
                         <div class="infobox-row">
                             <div class="infobox-label">Role:</div>
