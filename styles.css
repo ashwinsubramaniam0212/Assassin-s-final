@@ -61,6 +61,7 @@
 
         .site-title {
             font-size: 3.5rem;
+            animation: colorFade 2s ease-in-out infinite;
             margin-bottom: 0.5rem;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
             font-weight: 700;
@@ -69,8 +70,20 @@
 
         .site-subtitle {
             font-size: 1.4rem;
-            color: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            color: red;
+            animation: colorFade 2s ease-in-out infinite;
             font-style: italic;
+        }
+        @keyframes colorFade{
+            0%{
+                color: red;
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: red;
+            }
         }
 
         /* Navigation */
