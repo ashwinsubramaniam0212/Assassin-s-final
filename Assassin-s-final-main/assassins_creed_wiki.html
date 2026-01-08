@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassin's Creed Wiki - Complete Encyclopedia</title>
+    <meta name="description" content="Complete encyclopedia of Assassin's Creed franchise - games, characters, timeline, and detailed information.">
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="site-title">Assassin's Creed Wiki</h1>
+            <p class="site-subtitle">Nothing is true. Everything is permitted.</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="games">Games</a></li>
+                <li><a href="#" class="nav-link" data-page="characters">Characters</a></li>
+                <li><a href="#" class="nav-link" data-page="timeline">Timeline</a></li>
+                <li><a href="#" class="nav-link" data-page="gameplay">Gameplay</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">Theme</button>
+            <div class="search-box">
+                <input type="search" id="search-input" class="search-input" placeholder="Search wiki..." aria-label="Search">
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <main class="content" id="main-content"></main>
+        
+        <aside class="sidebar">
+            <div class="widget">
+                <h3 class="widget-title">Wiki Statistics</h3>
+                <div class="widget-content">
+                    <div class="stat-item">
+                        <span>Total Games:</span>
+                        <span class="stat-number" id="stat-games">11</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Characters:</span>
+                        <span class="stat-number" id="stat-characters">14</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Timeline Events:</span>
+                        <span class="stat-number" id="stat-timeline">11</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Total Sales:</span>
+                        <span class="stat-number">200M+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3 class="widget-title">Quick Links</h3>
+                <ul class="widget-list">
+                    <li><a href="#" class="nav-link" data-page="games">Browse All Games</a></li>
+                    <li><a href="#" class="nav-link" data-page="characters">Character Index</a></li>
+                    <li><a href="#" class="nav-link" data-page="timeline">Franchise Timeline</a></li>
+                    <li><a href="#" class="nav-link" data-page="gameplay">Gameplay Systems</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3 class="widget-title">Did You Know?</h3>
+                <div class="widget-content">
+                    <p>The first Assassin's Creed game was originally conceived as a Prince of Persia sequel called "Prince of Persia: Assassin".</p>
+                    <p style="margin-top: 1rem;">Altaïr's name means "bird of prey" in Arabic, reflecting the eagle imagery central to the Assassin Brotherhood.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Assassin's Creed Wiki - Fan Encyclopedia</p>
+            <p>Not affiliated with Ubisoft. All content for educational purposes.</p>
+            <p>Assassin's Creed is a trademark of Ubisoft Entertainment.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script>
+        const WIKI_DATA = {
+            games: [
+                {
+                    id: "ac1",
+                    title: "Assassin's Creed",
+                    year: 2007,
+                    platforms: ["PlayStation 3", "Xbox 360", "Microsoft Windows", "GeForce NOW"],
+                    setting: "Third Crusade, Holy Land (1191 AD)",
+                    protagonist: "Altaïr Ibn-La'Ahad",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    director: "Patrice Désilets",
+                    producer: "Jade Raymond",
+                    composer: "Jesper Kyd",
+                    engine: "Scimitar (later AnvilNext)",
+                    genre: "Action-adventure, stealth",
+                    mode: "Single-player",
+                    description: "The first installment follows Altaïr, a Master Assassin during the Third Crusade. After botching a mission to retrieve an Apple of Eden, he must redeem himself by assassinating nine targets across the Holy Land.",
+                    icon: "AC",
+                    image:"./assets/g1.jpg",
+                    plot: "In 2012, bartender Desmond Miles is kidnapped by Abstergo Industries and forced into the Animus to relive his ancestor Altaïr's memories. In 1191, Altaïr botches a mission at Solomon's Temple, resulting in his demotion. To regain his rank, he must assassinate nine Templar conspirators. As he eliminates each target, Altaïr uncovers a plot to control the Holy Land using the Apple of Eden. The conspiracy reaches his mentor Al Mualim, who betrays both Assassins and Templars to use the Apple's power. Altaïr defeats Al Mualim and discovers a map showing locations of other Pieces of Eden worldwide.",
+                    gameplay: "Open-world action-adventure featuring parkour, social stealth, and counter-based combat. Players explore Jerusalem, Acre, Damascus, and Masyaf, gathering intelligence before assassinations through eavesdropping, interrogation, and pickpocketing. Eagle Vision allows identifying allies, enemies, and targets. The health system represents synchronization between Desmond and Altaïr's memories.",
+                    development: "Originally conceived as 'Prince of Persia: Assassin' in 2004, inspired by Hassan-i Sabbah and Vladimir Bartol's novel Alamut. Renamed 'Assassin's Creed' near the 2006 GDC. Development cost $15-20 million over four years with a $10 million marketing budget. The Animus concept arose from DNA memory research. Side quests were added five days before mass production at the CEO's request.",
+                    reception: "Received generally favorable reviews (Metacritic: 81/100). Critics praised storytelling, visuals, and originality but criticized repetitive gameplay. Game Informer gave 9.5/10, GameSpot 9/10, IGN 7.5/10. Won multiple E3 2006 awards and AIAS Animation award. Sold 8 million copies by April 2009.",
+                    sales: "8 million copies sold worldwide"
+                },
+                {
+                    id: "ac2",
+                    title: "Assassin's Creed II",
+                    year: 2009,
+                    platforms: ["Xbox 360", "PlayStation 3", "Microsoft Windows"],
+                    setting: "Renaissance Italy (1476-1499)",
+                    protagonist: "Ezio Auditore da Firenze",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Follow Ezio's journey from a young Florentine nobleman to a Master Assassin in Renaissance Italy, seeking revenge for his family's betrayal and execution.",
+                    icon: "II",
+                    image:"./assets/g2.jpg",
+                    plot: "The sequel continues Desmond's story while introducing Ezio Auditore, who witnesses his father and brothers' execution orchestrated by Rodrigo Borgia. Ezio embarks on a decades-long journey of vengeance and discovery across Florence, Venice, and Rome, ultimately confronting Rodrigo, now Pope Alexander VI, in the Vatican Vault.",
+                    development: "Built on the foundation of the first game with improved mechanics and reduced repetition.",
+                    reception: "Critical and commercial success, improving on every aspect of the original.",
+                    release: "November 17, 2009 (US/Canada), November 20, 2009 (Europe)"
+                },
+                {
+                    id: "ac_brotherhood",
+                    title: "Assassin's Creed: Brotherhood",
+                    year: 2010,
+                    platforms: ["Xbox 360", "PlayStation 3", "Microsoft Windows"],
+                    setting: "Rome, Renaissance Italy (1500 AD)",
+                    protagonist: "Ezio Auditore da Firenze",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Ezio travels to Rome to rebuild the Assassin Brotherhood and liberate the city from Borgia family control.",
+                    icon: "BH",
+                    image:"./assets/g3.jpg",
+                    plot: "Expands Ezio's story as he takes on the Borgia family in Rome.",
+                    gameplay: "Introduces the brotherhood recruitment system, allowing players to recruit and train new assassins. Added multiplayer mode."
+                },
+                {
+                    id: "ac_revelations",
+                    title: "Assassin's Creed: Revelations",
+                    year: 2011,
+                    platforms: ["Xbox 360", "PlayStation 3", "Microsoft Windows"],
+                    setting: "Constantinople, Ottoman Empire (1511 AD)",
+                    protagonist: "Ezio Auditore da Firenze",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Ezio travels to Constantinople to uncover Altaïr's secrets, concluding both Ezio and Altaïr's stories.",
+                    icon: "REV",
+                    image:"./assets/g4.jpg",
+                },
+                {
+                    id: "ac3",
+                    title: "Assassin's Creed III",
+                    year: 2012,
+                    platforms: ["Xbox 360", "PlayStation 3", "Wii U", "Microsoft Windows"],
+                    setting: "American Revolution (1754-1783)",
+                    protagonist: "Ratonhnhaké:ton (Connor)",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Experience the American Revolution through Connor, a Native American assassin fighting for freedom and justice.",
+                    icon: "III",
+                    image:"./assets/g6.jpg",
+                    plot: "Born to a Mohawk mother and British Templar father, Connor is trained as an Assassin to fight the Templars who threaten his village. He becomes deeply involved in the Revolutionary War.",
+                    gameplay: "Introduced naval combat and concluded Desmond's modern-day story."
+                },
+                {
+                    id: "ac_black_flag",
+                    title: "Assassin's Creed IV: Black Flag",
+                    year: 2013,
+                    platforms: ["Xbox 360", "Xbox One", "PlayStation 3", "PlayStation 4", "Wii U", "Microsoft Windows"],
+                    setting: "Caribbean, Golden Age of Piracy (1715 AD)",
+                    protagonist: "Edward Kenway",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Sail the Caribbean as Edward Kenway, a pirate captain who becomes entangled with the Assassin Brotherhood during the Golden Age of Piracy.",
+                    icon: "IV",
+                    image:"./assets/g5.jpg",
+                    plot: "Edward Kenway, grandfather of Connor, commands his ship the Jackdaw across the Caribbean, seeking fortune while getting caught between Assassins and Templars.",
+                    gameplay: "Expanded naval combat and exploration became central to the experience."
+                },
+                {
+                    id: "ac_unity",
+                    title: "Assassin's Creed Unity",
+                    year: 2014,
+                    platforms: ["Xbox One", "PlayStation 4", "Microsoft Windows"],
+                    setting: "French Revolution, Paris (1789-1794)",
+                    protagonist: "Arno Dorian",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Navigate the chaos of the French Revolution as Arno Dorian seeks redemption in revolutionary Paris.",
+                    icon: "UN",
+                    image:"./assets/g7.jpg",
+                    plot: "Arno joins the Assassins to uncover the conspiracy behind his foster father's death. His relationship with Élise, a Templar, adds complexity to his mission.",
+                    gameplay: "First game designed for PS4/Xbox One. Features cooperative multiplayer missions."
+                },
+                {
+                    id: "ac_syndicate",
+                    title: "Assassin's Creed Syndicate",
+                    year: 2015,
+                    platforms: ["Xbox One", "PlayStation 4", "Microsoft Windows"],
+                    setting: "Victorian London (1868)",
+                    protagonist: "Jacob and Evie Frye",
+                    developer: "Ubisoft Quebec",
+                    publisher: "Ubisoft",
+                    description: "Control twin assassins Jacob and Evie Frye as they liberate London from Templar control during the Industrial Revolution.",
+                    icon: "SY",
+                    image:"./assets/g8.png",
+                    plot: "Twins form the Rooks gang to take over London's criminal underworld from Templar control.",
+                    gameplay: "Dual protagonists with different playstyles - Jacob focuses on direct combat, Evie on stealth."
+                },
+                {
+                    id: "ac_origins",
+                    title: "Assassin's Creed Origins",
+                    year: 2017,
+                    platforms: ["Xbox One", "PlayStation 4", "Microsoft Windows"],
+                    setting: "Ancient Egypt, Ptolemaic Period (49 BCE)",
+                    protagonist: "Bayek of Siwa",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Witness the origin of the Assassin Brotherhood in Ancient Egypt with Bayek, a Medjay protector seeking vengeance.",
+                    icon: "OR",
+                    image:"./assets/g9.jpg",
+                    plot: "Bayek's quest for revenge against those who killed his son leads him to found the Hidden Ones with his wife Aya - the precursor to the Assassin Brotherhood.",
+                    gameplay: "Major franchise reboot with RPG mechanics, leveling system, and open-world exploration."
+                },
+                {
+                    id: "ac_odyssey",
+                    title: "Assassin's Creed Odyssey",
+                    year: 2018,
+                    platforms: ["Xbox One", "PlayStation 4", "Microsoft Windows", "Nintendo Switch", "Google Stadia"],
+                    setting: "Ancient Greece, Peloponnesian War (431 BCE)",
+                    protagonist: "Kassandra or Alexios",
+                    developer: "Ubisoft Quebec",
+                    publisher: "Ubisoft",
+                    description: "Choose your hero and explore Ancient Greece during the Peloponnesian War, uncovering family secrets and mythological mysteries.",
+                    icon: "OD",
+                    image:"./assets/g10.jpg",
+                    plot: "Player chooses between siblings Kassandra and Alexios, descendants of Leonidas with Isu bloodline. Journey uncovers family secrets and battles the Cult of Kosmos.",
+                    gameplay: "Expanded RPG elements with dialogue choices, romance options, and multiple endings."
+                },
+                {
+                    id: "ac_valhalla",
+                    title: "Assassin's Creed Valhalla",
+                    year: 2020,
+                    platforms: ["Xbox One", "Xbox Series X/S", "PlayStation 4", "PlayStation 5", "Microsoft Windows", "Google Stadia"],
+                    setting: "Viking Age, England and Norway (873 AD)",
+                    protagonist: "Eivor Varinsdottir",
+                    developer: "Ubisoft Montreal",
+                    publisher: "Ubisoft",
+                    description: "Lead your Viking clan from Norway to England as Eivor, forging alliances and building a settlement during the Dark Ages.",
+                    icon: "VH",
+                    image:"./assets/g11.jpg",
+                    plot: "Eivor leads the Raven Clan from Norway to 9th century England, establishing a settlement and building alliances. Connection to Odin and Isu civilization plays crucial role.",
+                    gameplay: "Settlement building, raids, and deepest Isu lore yet. Player choice in gender and story decisions."
+                }
+            ],
+            characters: [
+                {
+                    id: "char_altair",
+                    name: "Altaïr Ibn-La'Ahad",
+                    gameId: "ac1",
+                    role: "Protagonist",
+                    era: "Third Crusade (1191 AD)",
+                    affiliation: "Assassin Brotherhood",
+                    voiceActor: "Philip Shahbaz",
+                    description: "A Master Assassin during the Third Crusade, known for his exceptional skills. After a mission failure at Solomon's Temple, he must redeem himself through nine assassinations.",
+                    icon: "AL",
+                    image:"./assets/c1.jpg",
+                    biography: "Altaïr starts as an arrogant Master Assassin who is demoted after botching the retrieval of an Apple of Eden. Through his journey eliminating nine Templar conspirators, he becomes wise and humble, eventually uncovering a conspiracy reaching his mentor Al Mualim. His name means 'bird of prey' in Arabic. After defeating Al Mualim, he discovers a map showing locations of Pieces of Eden worldwide. His design borrowed elements from G.I. Joe's Storm Shadow.",
+                    traits: "Initially arrogant, becomes wise and humble; exceptional combat and parkour skills; master of social stealth"
+                },
+                {
+                    id: "char_desmond",
+                    name: "Desmond Miles",
+                    gameId: "ac1",
+                    role: "Modern Day Protagonist",
+                    era: "Modern Day (2012)",
+                    affiliation: "Assassin Brotherhood (descendant)",
+                    voiceActor: "Nolan North",
+                    description: "A bartender kidnapped by Abstergo Industries to relive his ancestors' memories through the Animus.",
+                    icon: "DM",
+                    image:"./assets/c2.jpg",
+                    biography: "Desmond is the modern-day protagonist whose genetic memories connect all historical storylines. Kidnapped by Abstergo (modern Templars) and forced into the Animus. His journey spans multiple games, ultimately making pivotal choices affecting the world. Lucy Stillman assists him as an undercover Assassin. His story concludes in Assassin's Creed III.",
+                    traits: "Ordinary person thrust into extraordinary circumstances; gains Assassin skills through Bleeding Effect"
+                },
+                {
+                    id: "char_al_mualim",
+                    name: "Al Mualim",
+                    gameId: "ac1",
+                    role: "Antagonist",
+                    era: "Third Crusade (1191 AD)",
+                    affiliation: "Assassin Brotherhood (Leader), Templar Order (secretly)",
+                    voiceActor: "Peter Renaday",
+                    description: "The leader of the Assassin Brotherhood and Altaïr's mentor, who harbors a dark secret about his true intentions.",
+                    icon: "AM",
+                    image:"./assets/c3.webp",
+                    biography: "Al Mualim leads the Assassins from Masyaf. Based on historical figure Rashid ad-Din Sinan, nicknamed 'The Old Man of the Mountain.' His betrayal of both Assassins and Templars to control the Apple of Eden forces Altaïr to make difficult choices. He uses the Apple to enthrall Masyaf's population, planning to end all conflict by imposing order through force. Altaïr ultimately defeats him in the Masyaf gardens.",
+                    traits: "Wise mentor façade hiding manipulative ambitions; master strategist"
+                },
+                {
+                    id: "char_malik",
+                    name: "Malik Al-Sayf",
+                    gameId: "ac1",
+                    role: "Ally",
+                    era: "Third Crusade (1191 AD)",
+                    affiliation: "Assassin Brotherhood",
+                    voiceActor: "Haaz Sleiman",
+                    description: "Fellow Assassin who loses his arm and brother during the failed Solomon's Temple mission, initially resents Altaïr but later reconciles.",
+                    icon: "MA",
+                    image:"./assets/c4.avif",
+                    biography: "Malik accompanies Altaïr on the mission to Solomon's Temple. Though his brother Kadar dies and Malik loses his left arm due to Altaïr's arrogance, Malik manages to secure the Apple of Eden. Initially bitter toward Altaïr, he gradually makes amends as Altaïr becomes more humble. Malik helps Altaïr defeat Al Mualim's mind-controlled followers at the climax.",
+                    traits: "Bitter but honorable; skilled despite disability; eventually forgiving"
+                },
+                {
+                    id: "char_ezio",
+                    name: "Ezio Auditore da Firenze",
+                    gameId: "ac2",
+                    role: "Protagonist",
+                    era: "Renaissance Italy (1459-1524)",
+                    affiliation: "Assassin Brotherhood",
+                    description: "A Florentine nobleman who becomes a legendary Master Assassin after his family's execution, seeking revenge and uncovering ancient secrets.",
+                    icon: "EZ",
+                    image:"./assets/c5.png",
+                    biography: "Ezio's story spans over 40 years across three games (AC2, Brotherhood, Revelations). Born into nobility, his life changes when Rodrigo Borgia orders his father and brothers executed. From a carefree youth to a wise mentor, he becomes one of the most celebrated Assassins in history. Wields ancient Isu technology, defeats the Borgias, and travels to Constantinople to uncover Altaïr's legacy. His story represents the complete arc of an Assassin.",
+                    traits: "Charismatic, determined, evolves from vengeful youth to wise mentor"
+                },
+                {
+                    id: "char_leonardo",
+                    name: "Leonardo da Vinci",
+                    gameId: "ac2",
+                    role: "Ally",
+                    era: "Renaissance Italy (1452-1519)",
+                    affiliation: "Independent (Assassin ally)",
+                    description: "The famous Renaissance artist and inventor who becomes Ezio's closest friend, creating weapons and decoding ancient mysteries.",
+                    icon: "LV",
+                    image:"./assets/c6.jpg",
+                    biography: "Historical genius Leonardo da Vinci serves as Ezio's loyal friend and technological support. Decodes Codex pages left by Altaïr, providing blueprints for Assassin equipment upgrades including the Hidden Blade, Poison Blade, and Flying Machine. His artistic and scientific genius aids the Assassins while he pursues his own endeavors. Appears in AC2, Brotherhood, and briefly mentioned in later games.",
+                    traits: "Brilliant inventor, loyal friend, curious and open-minded"
+                },
+                {
+                    id: "char_rodrigo",
+                    name: "Rodrigo Borgia (Pope Alexander VI)",
+                    gameId: "ac2",
+                    role: "Antagonist",
+                    era: "Renaissance Italy (1431-1503)",
+                    affiliation: "Templar Order (Grand Master)",
+                    description: "The Grand Master of the Italian Templars who becomes Pope Alexander VI, seeking to control humanity with the Apple of Eden.",
+                    icon: "RB",
+                    image:"./assets/c7.jpg",
+                    biography: "Rodrigo Borgia orchestrates the execution of Ezio's family to eliminate threats to Templar plans. Rises to become Pope Alexander VI, using his religious authority to access the Vatican Vault seeking Isu artifacts. His ambition and corruption make him Ezio's primary nemesis throughout AC2 and Brotherhood. Ezio ultimately defeats him but spares his life, choosing to break the cycle of revenge.",
+                    traits: "Ruthlessly ambitious, corrupt, manipulative politician"
+                },
+                {
+                    id: "char_connor",
+                    name: "Ratonhnhaké:ton (Connor)",
+                    gameId: "ac3",
+                    role: "Protagonist",
+                    era: "American Revolution (1756-1824)",
+                    affiliation: "Assassin Brotherhood",
+                    description: "A Native American assassin fighting for freedom during the American Revolution, seeking to protect his people and ideals.",
+                    icon: "CO",
+                    image:"./assets/c8.jpg",
+                    biography: "Born to Mohawk mother Kaniehtí:io and British Templar Haytham Kenway. His village is burned by Templars when he's young. Trained by Assassin Achilles Davenport, Connor becomes deeply involved in the Revolutionary War, interacting with historical figures like George Washington and Benjamin Franklin. Fights to protect his people's land while caught between two sides of the war. His story is tragic as he achieves military victory but fails to save his people from American expansion.",
+                    traits: "Stoic, determined, idealistic, skilled hunter and warrior"
+                },
+                {
+                    id: "char_edward",
+                    name: "Edward Kenway",
+                    gameId: "ac_black_flag",
+                    role: "Protagonist",
+                    era: "Golden Age of Piracy (1693-1735)",
+                    affiliation: "Pirates, later Assassin Brotherhood",
+                    description: "A Welsh pirate captain who inadvertently becomes involved with the Assassins while seeking fortune in the Caribbean.",
+                    icon: "EK",
+                    image:"./assets/c9.jpg",
+                    biography: "Grandfather of Connor Kenway and father of Haytham Kenway. Initially a privateer seeking wealth, Edward becomes embroiled in the Assassin-Templar conflict accidentally. Commands the Jackdaw across the Caribbean during the Golden Age of Piracy. His journey from selfish pirate to dedicated Assassin forms the heart of his story. Witnesses the end of the pirate era and eventually settles in London, though his family's connection to both Assassins and Templars proves tragic.",
+                    traits: "Initially selfish and greedy, becomes honorable; exceptional naval captain"
+                },
+                {
+                    id: "char_haytham",
+                    name: "Haytham Kenway",
+                    gameId: "ac3",
+                    role: "Antagonist",
+                    era: "American Revolution (1725-1781)",
+                    affiliation: "Templar Order (Grand Master)",
+                    description: "Edward Kenway's son and Connor's father, Grand Master of the Colonial Templars.",
+                    icon: "HK",
+                    image:"./assets/c10.jpg",
+                    biography: "Edward Kenway's son who becomes a Templar Grand Master. Players initially play as Haytham in AC3's opening, believing him to be an Assassin. The revelation of his Templar allegiance is a major twist. Father to Connor through a relationship with Mohawk woman Kaniehtí:io. Represents a nuanced antagonist with understandable motivations, creating complex father-son conflict with Connor.",
+                    traits: "Sophisticated, intelligent, charismatic, pragmatic"
+                },
+                {
+                    id: "char_arno",
+                    name: "Arno Victor Dorian",
+                    gameId: "ac_unity",
+                    role: "Protagonist",
+                    era: "French Revolution (1768-unknown)",
+                    affiliation: "Assassin Brotherhood",
+                    description: "A French nobleman turned Assassin seeking redemption during the French Revolution after failing to prevent his adoptive father's murder.",
+                    icon: "AR",
+                    image:"./assets/c11.jpg",
+                    biography: "Adopted by Templar François de la Serre after his Assassin father's murder. When François is killed, Arno joins the Assassins to uncover the conspiracy. His relationship with Élise de la Serre, a Templar and his adoptive sister/love interest, adds emotional complexity. Navigates the chaos of Revolutionary Paris, caught between personal vendetta and greater conflict. His story explores themes of redemption and the cost of revenge.",
+                    traits: "Guilt-ridden, determined, skilled swordsman and free-runner"
+                },
+                {
+                    id: "char_jacob",
+                    name: "Jacob Frye",
+                    gameId: "ac_syndicate",
+                    role: "Protagonist",
+                    era: "Victorian Era (1847-unknown)",
+                    affiliation: "Assassin Brotherhood",
+                    description: "A brash and impulsive assassin who leads the Rooks gang, fighting to liberate Victorian London from Templar control.",
+                    icon: "JF",
+                    image:"./assets/c12.jpg",
+                    biography: "The more aggressive Frye twin, preferring direct action over subtlety. Forms the Rooks street gang to take over London's underworld from Templar-controlled Blighters. Often clashes with sister Evie's more strategic approach. Despite his rough edges and impulsive nature, proves effective at dismantling Templar operations. His character arc involves learning to balance action with planning.",
+                    traits: "Brash, impulsive, charismatic, direct fighter"
+                },
+                {
+                    id: "char_evie",
+                    name: "Evie Frye",
+                    gameId: "ac_syndicate",
+                    role: "Protagonist",
+                    era: "Victorian Era (1847-unknown)",
+                    affiliation: "Assassin Brotherhood",
+                    description: "Jacob's twin sister, a tactical and stealth-focused assassin dedicated to finding Pieces of Eden in Victorian London.",
+                    icon: "EF",
+                    image:"./assets/c13.jpg",
+                    biography: "The more intellectual Frye twin, focused on stealth and finding Isu artifacts. Works in the shadows while Jacob takes the spotlight. Equally capable in combat despite preferring avoidance. Her storyline focuses on finding the Shroud of Eden and includes a romance with fellow Assassin Henry Green. Proves that strategic thinking is as valuable as direct action.",
+                    traits: "Intelligent, stealthy, strategic, capable fighter when necessary"
+                },
+                {
+                    id: "char_bayek",
+                    name: "Bayek of Siwa",
+                    gameId: "ac_origins",
+                    role: "Protagonist",
+                    era: "Ptolemaic Egypt (85 BCE-unknown)",
+                    affiliation: "Medjay, co-founder of Hidden Ones",
+                    description: "A Medjay protector who becomes one of the founders of the Hidden Ones, the precursor to the Assassin Brotherhood.",
+                    icon: "BA",
+                    image:"./assets/c14.avif",
+                    biography: "Last of the Medjay, protectors of Egypt. His quest for revenge against the Order of the Ancients (proto-Templars) who killed his son Khemu leads him to found the Hidden Ones with wife Aya. Embodies the ideals that define the Assassin Brotherhood: protecting the innocent and fighting tyranny. His story shows the birth of the Creed and the personal cost of founding a movement that will span millennia.",
+                    traits: "Honorable, protective, skilled warrior, devoted father and husband"
+                },
+                {
+                    id: "char_aya",
+                    name: "Aya of Alexandria (Amunet)",
+                    gameId: "ac_origins",
+                    role: "Deuteragonist",
+                    era: "Ptolemaic Egypt (85 BCE-unknown)",
+                    affiliation: "Co-founder of Hidden Ones",
+                    description: "Bayek's wife who co-founds the Hidden Ones and becomes the legendary Assassin Amunet.",
+                    icon: "AY",
+                    image:"./assets/c15.avif",
+                    biography: "Bayek's wife and partner in founding the Hidden Ones. Scholar and skilled warrior. Becomes more focused on the mission than personal life, leading to emotional distance from Bayek. As Amunet, she assassinates Cleopatra and becomes legendary. Player controls her in key naval and assassination missions. Her character represents sacrifice for greater cause.",
+                    traits: "Intelligent, determined, skilled in combat and politics"
+                },
+                {
+                    id: "char_kassandra",
+                    name: "Kassandra",
+                    gameId: "ac_odyssey",
+                    role: "Protagonist (canonical)",
+                    era: "Classical Greece (458 BCE-2018 CE)",
+                    affiliation: "Independent, later Hidden Ones ally",
+                    description: "A Spartan mercenary with Isu bloodline who becomes a legendary hero during the Peloponnesian War.",
+                    icon: "KA",
+                    image:"./assets/c16.jpg",
+                    biography: "Granddaughter of King Leonidas I, descendant of Isu with strong bloodline connection. Wields the Spear of Leonidas, a Piece of Eden. Cast from Sparta as a child, becomes a mercenary. Journey uncovers family secrets and battles Cult of Kosmos (proto-Templars). Player choices determine her personality and relationships. Gains immortality through Isu artifact, living until modern day where she passes the Staff of Hermes Trismegistus to Layla Hassan. Canonical protagonist over Alexios.",
+                    traits: "Witty, confident, adaptable, exceptional warrior"
+                },
+                {
+                    id: "char_eivor",
+                    name: "Eivor Varinsdottir",
+                    gameId: "ac_valhalla",
+                    role: "Protagonist",
+                    era: "Viking Age (847 CE-unknown)",
+                    affiliation: "Raven Clan, Hidden Ones ally",
+                    description: "A fierce Viking warrior who leads the Raven Clan to England, forging alliances and uncovering ancient mysteries.",
+                    icon: "EI",
+                    image:"./assets/c17.avif",
+                    biography: "Leads Raven Clan from Norway to England, establishing settlement of Ravensthorpe. Player chooses gender (canonically female). Experiences visions of Isu life as Odin due to reincarnation connection. Allies with Hidden Ones while maintaining Viking identity. Story deeply explores Isu civilization and their role in human history. Builds alliances across England's kingdoms during Saxon-Viking conflicts. Connection to Odin/Isu creates internal struggle between duty to clan and larger cosmic implications.",
+                    traits: "Fierce warrior, natural leader, loyal to clan, wrestling with destiny"
+                }
+            ],
+            timeline: [
+                {
+                    year: 2007,
+                    event: "Assassin's Creed released",
+                    description: "The first game debuts, introducing Altaïr and Desmond. Sold 8 million copies and established the franchise. Won multiple E3 2006 awards.",
+                    type: "game"
+                },
+                {
+                    year: 2009,
+                    event: "Assassin's Creed II released",
+                    description: "Introduces Ezio Auditore. The sequel improved on every aspect and became a critical and commercial success.",
+                    type: "game"
+                },
+                {
+                    year: 2010,
+                    event: "Brotherhood released",
+                    description: "Expands Ezio's story in Rome. Introduces multiplayer and the brotherhood recruitment system.",
+                    type: "game"
+                },
+                {
+                    year: 2011,
+                    event: "Revelations released",
+                    description: "Concludes Ezio and Altaïr's stories. Ezio travels to Constantinople to uncover Altaïr's secrets.",
+                    type: "game"
+                },
+                {
+                    year: 2012,
+                    event: "Assassin's Creed III released",
+                    description: "American Revolution setting introduces Connor and naval combat. Concludes Desmond's modern-day story.",
+                    type: "game"
+                },
+                {
+                    year: 2013,
+                    event: "Black Flag released",
+                    description: "Golden Age of Piracy. Edward Kenway's pirate adventure becomes a fan favorite with expanded naval gameplay.",
+                    type: "game"
+                },
+                {
+                    year: 2014,
+                    event: "Unity released",
+                    description: "French Revolution, next-gen debut. First game designed for PS4/Xbox One, features cooperative multiplayer.",
+                    type: "game"
+                },
+                {
+                    year: 2015,
+                    event: "Syndicate released",
+                    description: "Victorian London. Introduces dual protagonists Jacob and Evie Frye in Industrial Revolution London.",
+                    type: "game"
+                },
+                {
+                    year: 2017,
+                    event: "Origins released",
+                    description: "Major franchise reboot with RPG mechanics. Explores the birth of the Assassin Brotherhood in Ancient Egypt.",
+                    type: "game"
+                },
+                {
+                    year: 2018,
+                    event: "Odyssey released",
+                    description: "Ancient Greece exploration. Expands RPG mechanics with dialogue choices and multiple endings.",
+                    type: "game"
+                },
+                {
+                    year: 2020,
+                    event: "Valhalla released",
+                    description: "Viking Age saga. Eivor's story features settlement building and the deepest Isu lore yet.",
+                    type: "game"
+                }
+            ],
+            gameplay: {
+                animus: {
+                    title: "The Animus",
+                    description: "A machine that reads genetic memories contained within a person's DNA, allowing users to relive their ancestors' experiences in a fully immersive simulation. The technology serves as the narrative framework connecting all games. Health is represented as synchronization between the user and ancestral memories - deviations represent 'desynchronization' rather than death.",
+                    features: ["Time/location travel explanation", "User interface justification", "Memory replay mechanism", "Glitch mechanics"]
+                },
+                eagleVision: {
+                    title: "Eagle Vision",
+                    description: "A sixth sense ability inherited from Isu DNA that allows Assassins to distinguish friends from foes and identify important targets. Characters are highlighted in different colors: allies (blue), enemies (red), targets (gold), and neutral parties (white). Later games expanded this into 'Eagle Sense' and drone-like eagle companions.",
+                    features: ["Enemy identification", "Target tracking", "Environmental clues", "Isu heritage manifestation"]
+                },
+                socialStealth: {
+                    title: "Social Stealth",
+                    description: "The ability to hide in plain sight by blending with crowds, sitting on benches, or joining groups of scholars. This mechanic distinguishes Assassin's Creed from traditional stealth games. Players use 'low-profile' actions to remain inconspicuous and 'high-profile' actions for direct confrontation or escape.",
+                    features: ["Crowd blending", "Hiding spots (hay carts, benches, crowds)", "Low-profile/high-profile actions", "Alert system"]
+                },
+                parkour: {
+                    title: "Parkour & Free-Running",
+                    description: "Fluid movement system allowing characters to climb buildings, leap across rooftops, and navigate environments with acrobatic precision. The parkour system was revolutionary for its time, creating a sense of freedom and verticality in open-world gameplay.",
+                    features: ["Building climbing", "Rooftop traversal", "Leap of faith", "Environmental navigation"]
+                },
+                combat: {
+                    title: "Combat Systems",
+                    description: "Combat evolved significantly across the series. Early games featured counter-based systems where timing blocks led to instant kills. Later RPG-focused entries (Origins onward) introduced hitbox-based combat with light/heavy attacks, abilities, and gear-based stats.",
+                    features: ["Counter-based (AC1-Syndicate)", "Hidden Blade assassinations", "Various weapon types", "RPG combat system (Origins-Valhalla)"]
+                },
+                synchronization: {
+                    title: "Synchronization",
+                    description: "Represents the accuracy of reliving ancestral memories. Acts as the game's health/death system - losing all synchronization restarts from the last checkpoint. Optional objectives in missions offer higher synchronization percentages, rewarding players who follow the 'true' historical events more closely.",
+                    features: ["Health system", "Optional objectives", "100% completion tracking", "Lore-integrated game mechanics"]
+                }
+            },
+            organizations: {
+                assassins: {
+                    name: "Assassin Brotherhood (Hidden Ones)",
+                    founding: "Ancient origins, formally founded in 49 BCE (Origins)",
+                    creed: "Nothing is true, everything is permitted",
+                    ideology: "Protection of free will and individual liberty. Oppose tyranny and control. Work from the shadows to serve the light.",
+                    tenets: [
+                        "Stay your blade from the flesh of an innocent",
+                        "Hide in plain sight",
+                        "Never compromise the Brotherhood"
+                    ],
+                    notableMembers: ["Altaïr Ibn-La'Ahad", "Ezio Auditore", "Connor Kenway", "Edward Kenway", "Arno Dorian", "Bayek of Siwa"],
+                    headquarters: ["Masyaf (Middle Ages)", "Monteriggioni (Renaissance)", "Davenport Homestead (Colonial)", "Various bureaus"],
+                    description: "Originally the 'Hidden Ones' founded by Bayek and Aya in Ancient Egypt. Inspired by the historical Hashshashin Order of Assassins. Fight to preserve humanity's free will against Templar control. Operate as a decentralized network across the globe throughout history."
+                },
+                templars: {
+                    name: "Templar Order (Order of the Ancients)",
+                    founding: "Ancient origins as Order of the Ancients",
+                    ideology: "Peace through order and control. Believe humanity requires guidance and structure. Seek to create a perfect world by eliminating free will.",
+                    modernFront: "Abstergo Industries - pharmaceutical and technology conglomerate",
+                    notableMembers: ["Rodrigo Borgia", "Haytham Kenway", "Al Mualim (secretly)", "Robert de Sablé"],
+                    description: "Inspired by the historical Knights Templar. The Order of the Ancients (proto-Templars) predates the formal Templar organization. In modern times, operate through Abstergo Industries. Seek Pieces of Eden to control humanity and enforce their vision of peace. Despite opposing methods, share Assassins' goal of peace - the conflict stems from whether it should be achieved through freedom or control."
+                },
+                isu: {
+                    name: "The Isu (First Civilization, Those Who Came Before)",
+                    era: "Predating humanity (77,000+ years ago)",
+                    description: "Advanced precursor race that created humanity as a servile workforce. Possessed incredible technology that appears magical. Their civilization was destroyed in a cataclysmic event. Created Pieces of Eden to control humans. Some Isu DNA mixed with human bloodlines, granting abilities like Eagle Vision. Heavily featured in later games, especially Valhalla.",
+                    artifacts: ["Pieces of Eden", "Apples of Eden", "Shroud", "Staff of Hermes Trismegistus", "Spear of Leonidas"],
+                    notableIsu: ["Juno", "Minerva", "Jupiter", "Odin", "Loki"]
+                }
+            }
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
